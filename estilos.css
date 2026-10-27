@@ -1,0 +1,265 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #263238;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 80, 40, 0.15);
+}
+
+/* ENCABEZADO */
+
+/* ENCABEZADO CON LOGOTIPOS */
+
+.encabezado {
+    background: linear-gradient(135deg, #00695c, #009688);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 35px;
+    gap: 20px;
+}
+
+/* LOGOTIPOS */
+
+.logo {
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+/* TÍTULO CENTRAL */
+
+.titulo-encabezado {
+    flex: 1;
+    text-align: center;
+}
+
+.titulo-encabezado h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.titulo-encabezado p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.icono {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.encabezado h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* FORMULARIO */
+
+form {
+    padding: 40px;
+}
+
+h2 {
+    color: #00796b;
+    font-size: 19px;
+    margin: 25px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e0f2f1;
+}
+
+/* COLUMNAS */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-completo {
+    grid-column: span 2;
+}
+
+/* ETIQUETAS */
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #37474f;
+    margin-bottom: 9px;
+}
+
+/* CAMPOS */
+
+input,
+select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1.5px solid #d7e5df;
+    border-radius: 11px;
+    font-size: 14px;
+    background: #f8fcfa;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #009688;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 150, 136, 0.12);
+}
+
+input::placeholder {
+    color: #9eaaa5;
+}
+
+/* BOTÓN */
+
+.btn-registrar {
+    width: 100%;
+    margin-top: 35px;
+    padding: 17px;
+    background: linear-gradient(135deg, #00897b, #00695c);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 105, 92, 0.2);
+}
+
+.btn-registrar:hover {
+    background: linear-gradient(135deg, #00695c, #004d40);
+    transform: translateY(-2px);
+    box-shadow: 0 9px 20px rgba(0, 105, 92, 0.3);
+}
+
+/* MENSAJE */
+
+.mensaje {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #00796b;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #f1f8f5;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+    color: #607d72;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .encabezado {
+        padding: 35px 15px;
+    }
+
+    .encabezado h1 {
+        font-size: 23px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .campo-completo {
+        grid-column: span 1;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+}
+
+/* DISEÑO RESPONSIVO DE LOGOTIPOS */
+
+@media (max-width: 650px) {
+
+    .encabezado {
+        padding: 25px 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        padding: 3px;
+    }
+
+    .titulo-encabezado h1 {
+        font-size: 19px;
+    }
+
+    .titulo-encabezado p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .encabezado {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .titulo-encabezado {
+        order: 3;
+        flex-basis: 100%;
+    }
+}

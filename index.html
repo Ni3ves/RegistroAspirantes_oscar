@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Aspirantes | UATV</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <div class="encabezado">
+
+    <!-- LOGOTIPO UTIM -->
+    <img src="imagenes/utim.jpeg"
+         alt="Logotipo UTIM"
+         class="logo logo-izquierdo">
+
+    <!-- TÍTULO CENTRAL -->
+    <div class="titulo-encabezado">
+        <h1>Registro de Aspirantes</h1>
+        <p>Completa tus datos para conocer nuestra oferta educativa</p>
+    </div>
+
+    <!-- LOGOTIPO UATV -->
+    <img src="imagenes/uatv.jpeg"
+         alt="Logotipo UATV"
+         class="logo logo-derecho">
+
+</div>
+
+        <form id="formularioRegistro">
+
+            <h2>Información personal</h2>
+
+            <div class="form-grid">
+
+                <div class="campo">
+                    <label for="nombre">Nombre del alumno</label>
+                    <input type="text" id="nombre"
+                    placeholder="Ingresa tu nombre completo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad"
+                    placeholder="Ej. 18" min="15" max="100" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono"
+                    placeholder="10 dígitos"
+                    pattern="[0-9]{10}"
+                    maxlength="10" required>
+                </div>
+
+                <div class="campo">
+                    <label for="carrera">Carrera de interés</label>
+                    <select id="carrera" required>
+                        <option value="">Selecciona una carrera</option>
+                        <option value="Educación">Educación</option>
+                        <option value="Tecnologías de la Información">
+                            Tecnologías de la Información
+                        </option>
+                        <option value="Contaduría">Contaduría</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="redSocial">Red social</label>
+                    <input type="text" id="redSocial"
+                    placeholder="Ej. Facebook: Juan Pérez">
+                </div>
+
+            </div>
+
+            <h2>Información de domicilio</h2>
+
+            <div class="form-grid">
+
+                <div class="campo campo-completo">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion"
+                    placeholder="Calle, número y colonia" required>
+                </div>
+
+                <div class="campo">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" id="localidad"
+                    placeholder="Nombre de tu localidad" required>
+                </div>
+
+                <div class="campo">
+                    <label for="municipio">Municipio</label>
+                    <input type="text" id="municipio"
+                    placeholder="Nombre de tu municipio" required>
+                </div>
+
+                <div class="campo campo-completo">
+                    <label for="estado">Estado</label>
+                    <select id="estado" required>
+                        <option value="">Selecciona tu estado</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Guerrero">Guerrero</option>
+                        <option value="Oaxaca">Oaxaca</option>
+                        <option value="Morelos">Morelos</option>
+                        <option value="Tlaxcala">Tlaxcala</option>
+                        <option value="Otro">Otro estado</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-registrar">
+                ✓ Registrar alumno
+            </button>
+
+            <p class="mensaje" id="mensaje"></p>
+
+        </form>
+
+        <footer>
+            Universidad Académica Tulcingo de Valle
+            <br>
+            Sistema de Registro de Aspirantes
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
